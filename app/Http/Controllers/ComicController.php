@@ -7,6 +7,15 @@ use App\Comic;
 
 class ComicController extends Controller
 {
+    protected $validationRules=[
+        'title'=>'required|max:60',
+        'description'=>'required|min:10',
+        'thumb'=>'required|url',
+        'price'=>'required',
+        'series'=>'required|max:30',
+        'sale_date'=>'required',
+        'type'=>'required|max:60',
+    ];
     /**
      * Display a listing of the resource.
      *
@@ -36,6 +45,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate($this->validationRules);
         // passaggio richiesta form da salvare a db
         $data=$request->all();
 
@@ -87,7 +97,8 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Comic $comic)
-    {
+    {   
+        $request->validate($this->validationRules);
         $data=$request->all();
         $comic->update($data);
         return redirect()->route('comics.show', $comic->id);
