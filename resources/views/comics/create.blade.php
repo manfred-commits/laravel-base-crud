@@ -51,8 +51,6 @@
 		@enderror
 	</div>
 
-
-
 	<div class="form-group">
 		<label for="type">tipo</label>
 		<input type="text" class="form-control" id="type" name="type" placeholder="Insersci il tipo di comic" value='{{old('type')}}'>
