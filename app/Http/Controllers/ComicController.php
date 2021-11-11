@@ -39,16 +39,19 @@ class ComicController extends Controller
         // passaggio richiesta form da salvare a db
         $data=$request->all();
 
-        $newcomic= new Comic();
-        $newcomic->title=$data['title'];
-        $newcomic->description=$data['description'];
-        $newcomic->thumb=$data['thumb'];
-        $newcomic->price=$data['price'];
-        $newcomic->series=$data['series'];
-        $newcomic->sale_date=$data['sale_date'];
-        $newcomic->type=$data['type'];
-        $newcomic->save();
-        return redirect()->route('comics.show', $newcomic->id);
+        
+        // $newComic= new Comic();
+        // $newcomic->title=$data['title'];
+        // $newcomic->description=$data['description'];
+        // $newcomic->thumb=$data['thumb'];
+        // $newcomic->price=$data['price'];
+        // $newcomic->series=$data['series'];
+        // $newcomic->sale_date=$data['sale_date'];
+        // $newcomic->type=$data['type'];
+        // $newcomic->save();
+
+        $newComic= Comic::create($data);
+        return redirect()->route('comics.show', $newComic->id);
     }
 
     /**
