@@ -9,7 +9,7 @@
 </head>
 <body>
     
-    @yield('name')
+    @yield('pageContent')
 
     <script src="{{asset("js/app.js")}}"></script>
 </body>
