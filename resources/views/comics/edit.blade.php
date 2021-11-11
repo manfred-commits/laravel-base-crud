@@ -3,7 +3,7 @@
 @section('pageContent')
 <h1>Modifica il comic: {{$comic['title']}} </h1>
 
-{{-- route to update --}}
+{{-- route to update (to update the data in the db)--}}
 <form action="{{route("comics.update", $comic['id'])}}" method="POST">
 	@csrf
     @method('PUT')
