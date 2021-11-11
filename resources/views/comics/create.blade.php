@@ -30,7 +30,7 @@
 	</div>
 	<div class="form-group">
 		<label for="sale_date">Data di rilascio</label>
-		<input type="number" class="form-control" id="sale_date" name="sale_date" placeholder="Insersci la date di rilascio">
+		<input type="date" class="form-control" id="sale_date" name="sale_date" placeholder="Insersci la date di rilascio">
 	</div>
 
 
