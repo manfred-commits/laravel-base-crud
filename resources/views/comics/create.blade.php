@@ -9,14 +9,14 @@
     
 	<div class="form-group">
         <label for="title">Titolo</label>
-		<input type="text" class="form-control" id="title" name="title" placeholder="Insersci titolo">
+		<input type="text" class="form-control" id="title" name="title" placeholder="Insersci titolo" value='{{old('title')}}'>
 		@error('title')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
 	</div>
     <div class="form-group">
         <label for="description">Descrizione Comic</label>
-        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Insersci la descrizione"></textarea>
+        <textarea class="form-control" name="description" id="description" cols="30" rows="10" placeholder="Insersci la descrizione">{{old('description')}}</textarea>
 		@error('description')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
@@ -24,28 +24,28 @@
 
 	<div class="form-group">
 		<label for="thumb">link img</label>
-		<input type="text" class="form-control" id="thumb" name="thumb" placeholder="Insersci il link img">
+		<input type="text" class="form-control" id="thumb" name="thumb" placeholder="Insersci il link img" value='{{old('thumb')}}'>
 		@error('thumb')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
 	</div>
     <div class="form-group">
         <label for="price">Prezzo</label>
-        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Insersci il prezzo">
+        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Insersci il prezzo" value='{{old('price')}}'>
 		@error('price')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
     </div>
     <div class="form-group">
 		<label for="series">serie</label>
-		<input type="text" class="form-control" id="series" name="series" placeholder="Insersci tipo di serie">
+		<input type="text" class="form-control" id="series" name="series" placeholder="Insersci tipo di serie" value='{{old('series')}}'>
 		@error('series')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
 	</div>
 	<div class="form-group">
 		<label for="sale_date">Data di rilascio</label>
-		<input type="date" class="form-control" id="sale_date" name="sale_date" placeholder="Insersci la date di rilascio">
+		<input type="date" class="form-control" id="sale_date" name="sale_date" placeholder="Insersci la date di rilascio" value='{{old('sale_date')}}'>
 		@error('sale_date')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
@@ -55,7 +55,7 @@
 
 	<div class="form-group">
 		<label for="type">tipo</label>
-		<input type="text" class="form-control" id="type" name="type" placeholder="Insersci il tipo di comic">
+		<input type="text" class="form-control" id="type" name="type" placeholder="Insersci il tipo di comic" value='{{old('type')}}'>
 		@error('type')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
