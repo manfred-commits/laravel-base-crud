@@ -22,9 +22,9 @@
 		<td>{{$comic["title"]}}</td>
 		<td>{{$comic["description"]}}</td>
 		<td><img src="{{$comic["thumb"]}}" alt=""></td>
-		<td>{{$comic["price"]}} </td>
-		<td>{{$comic["series"]}} </td>
-		<td>{{$comic["sale_date"]}} </td>
+		<td>{{$comic["price"]}}</td>
+		<td>{{$comic["series"]}}</td>
+		<td>{{$comic["sale_date"]}}</td>
 		<td>{{$comic["type"]}} </td>
 		<td><a href="{{route("comics.show", $comic["id"])}}"><button type="button" class="btn btn-primary">Visualizza</button></a></td>
 	  </tr>
