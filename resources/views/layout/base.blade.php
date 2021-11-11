@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    @include('partials.header')
     @yield('pageContent')
 
     <script src="{{asset("js/app.js")}}"></script>
