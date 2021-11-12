@@ -8,13 +8,13 @@ use App\Comic;
 class ComicController extends Controller
 {
     protected $validationRules=[
-        'title'=>'required|max:60',
+        'title'=>'required|min:8|max:60',
         'description'=>'required|min:10',
         'thumb'=>'required|url',
-        'price'=>'required',
-        'series'=>'required|max:30',
-        'sale_date'=>'required',
-        'type'=>'required|max:60',
+        'price'=>'required|numeric|min:1|max:255',
+        'series'=>'required|min:5|max:30',
+        'sale_date'=>'required|date',
+        'type'=>'required|min:3|max:60',
     ];
     /**
      * Display a listing of the resource.
